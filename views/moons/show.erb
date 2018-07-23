@@ -1,0 +1,18 @@
+<section class="container"> 
+    <a href="/galaxy/<%= @moon.planet.galaxy.id %>"><%= @moon.planet.galaxy.name %></a>> 
+    <a href="/planet/<%= @moon.planet.id %>"><%= @moon.planet.name %></a>>
+    <header>
+        <h3><%= @moon.name %></h3>
+        <% if logged_in? %>
+            <a href="/moon/<%= @moon.id %>/edit">Edit Moon</a>
+        <% end %>
+    </header>
+    <section class="info">
+        <section class="image">
+            <img class="show" src="<%= @moon.photo_url %>" alt="<%= @moon.name %>">
+        </section>
+        <section class="blurb"></section>
+            <p><%= @moon.blurb %></p>
+        </section>
+    </section>
+</section>

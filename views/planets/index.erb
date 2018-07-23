@@ -1,0 +1,11 @@
+<h2>Planets</h2>
+<section class="records-list">
+        <% @planets.each do |planet| %>
+        <section class="record">
+            <a href="/planet/<%= planet.id %>">
+                <img class="thumb" src="<%= planet.photo_url %>" alt="<%= planet.name %>">
+            </a>
+            <p><a href="/planet/<%= planet.id %>"><%= planet.name %></a><p>
+        </section>
+    <% end %>  
+</section>

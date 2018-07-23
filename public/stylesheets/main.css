@@ -1,0 +1,156 @@
+*{
+    box-sizing: border-box;
+}
+body{ 
+    font-family: 'Raleway', sans-serif;
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+header{
+    border-radius: 10px;
+    margin: 2vh auto;
+    padding: 4vh 4vw;
+    max-height: 40vh;
+    max-width: 80vw;
+    color:white;
+    border: 2px solid white;
+}
+h1, h2, h3{
+    font-family: 'Righteous', cursive;
+}
+nav ul{
+    display: flex;
+    padding-left: 0;
+}
+nav li{
+    flex: 1;
+    list-style: none;
+    padding: 1vh 1vw;
+    margin: 0 1vw;
+}
+a, a:visited{
+    color:white;
+}
+a:hover{
+    text-decoration: none;
+    color: #fffab0;
+}
+.logout button{
+    display: inline;
+    font-size: 1vh;
+    margin: 0;
+}
+.featured{
+    display:flex;
+    border-radius: 10px;
+    margin: 3vh auto;
+    padding: 4vh 4vw;
+    overflow-x: auto;
+    max-height: 30vh;
+    max-width: 80vw;
+    border: 2px solid white;
+}
+.container, .records-list{
+    border-radius: 10px;
+    border: 2px solid white;
+    margin: 3vh auto;
+    padding: 3vh 3vw;
+    max-width: 80vw;
+    justify-content: space-evenly;
+}
+.records-list{
+    display:flex;
+    flex-wrap: wrap;
+}
+input, label, button, textarea{
+    display:block;
+    margin: 3vh auto;
+    font-size: 3vh;
+    border-radius: 10px;
+    background: transparent;
+    color: white;
+}
+input, button, textarea{
+    border: 2px solid white;
+}
+input, label, button{
+    height: 5vh;
+}
+textarea{
+    height: 20vh;
+    width: 45vw;
+    background: transparent;
+}
+select{
+    display:block;
+    margin: 3vh auto;
+    font-size: 3vh;
+    width: 40vw;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background: transparent;
+    border: 2px solid white;
+}
+.record{
+    padding: 2.5vh 2.5vw;
+    margin: 0 2vw;
+    background-color: black;
+    color:white;
+    border-radius: 10px;
+    max-height: 37vh;
+    padding: 2.5vh 2.5vh;
+    margin: 2.5vh 2.5vh;
+    min-width: 20vw;
+    max-width: 20vw;
+    flex-basis: auto; /* default value */
+    flex-grow: 1;
+    border: 2px solid white;
+}
+.record a{
+    color: white;
+    text-decoration: none;
+}
+img {
+    object-fit: cover;
+    max-width:15vw;
+    max-height:10vh;
+    border-radius: 10px;
+}
+.info{
+    display: flex;
+    margin-bottom: 5vh;
+}
+.image{
+    flex: 1;
+    vertical-align: top;
+}
+.blurb{
+    flex: 1;
+    vertical-align: top;
+    
+}
+p{
+    margin:0;
+    text-align: center;
+}
+.info p{
+    margin:0;
+    padding: 4vh 1vw;
+    text-align: left;
+}
+.show {
+    max-width:40vw;
+    max-height:40vw;
+    padding: 4vh 1vw;
+}
+.children ul{
+    padding-left: 0;
+    display: flex;
+    text-align: center;
+}
+.children li{
+    flex: 1;
+    list-style: none;
+}

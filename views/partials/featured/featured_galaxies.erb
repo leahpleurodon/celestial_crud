@@ -1,0 +1,14 @@
+<h2>Featured Galaxies</h2>
+<section class="featured">
+    <% @galaxies.each do |galaxy| %>
+        <section class="record">
+            <a href="/galaxy/<%= galaxy.id %>">
+                <img class="thumb" src="<%= galaxy.photo_url %>" alt="<%= galaxy.name %>">
+                <p><%= galaxy.name %><p>
+            </a>
+        </section>
+    <% end %>
+    <% if @galaxies.count > 3 %>
+        <div style="width:8vw;">&nbsp;</div>
+    <%end %>
+</section>

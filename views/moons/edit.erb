@@ -1,0 +1,33 @@
+<section class="container">
+    <h2>Edit Moon</h2>
+    <form action="/moon/<%= @moon.id %>" method="post">
+        <input type="hidden" name="_method" value="put">
+        <label for="name">Name</label>
+        <input type="text" name="name" value="<%= @moon.name %>">
+        <label for="planet_id">Planet</label>
+        <select name="planet_id" >
+            <% @planets.each do |planet| %>
+                <% if planet.id == @moon.planet_id %>
+                    <option value="<%= planet.id %>" selected="selected">
+                        <%= planet.name %>
+                    </option>
+                <% else %>
+                    <option value="<%= planet.id %>">
+                        <%= planet.name %>
+                    </option>
+                <% end %>
+            <% end %>
+        </select>
+        <label for="photo_url">Photo URL</label>
+        <input type="text" name="photo_url" value="<%= @moon.photo_url %>">
+        <label for="blurb">Blurb</label>
+        <textarea name="blurb"><%= @moon.blurb %></textarea>
+        <label for="featured">Featured</label>
+        <% if @moon.featured %>
+            <input type="checkbox" name="featured" checked/>
+        <% else %>
+            <input type="checkbox" name="featured"/>
+        <% end %>
+        <button>Post</button>
+    </form>
+</section>

@@ -1,0 +1,14 @@
+<h2>Featured Moons</h2>
+<section class="featured">
+    <% @moons.each do |moon| %>
+        <section class="record">
+            <a href="/moon/<%= moon.id %>">
+                <img class="thumb" src="<%= moon.photo_url %>" alt="<%= moon.name %>">
+                <p><%= moon.name %><p>
+            </a>
+        </section> 
+    <% end %>   
+    <% if @moons.count > 3 %>
+        <div style="width:8vw;">&nbsp;</div>
+    <%end %>
+</section>

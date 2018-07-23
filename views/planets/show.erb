@@ -1,0 +1,25 @@
+<section class="container"> 
+    <a href="/galaxy/<%= @planet.galaxy.id %>"><%= @planet.galaxy.name %></a>>
+    <header>
+        <h3><%= @planet.name %></h3>
+        <% if logged_in? %>
+            <a href="/planet/<%= @planet.id %>/edit">Edit Planet</a>
+        <% end %>
+    </header>
+    <section class="info">
+        <section class="image">
+            <img class="show" src="<%= @planet.photo_url %>" alt="<%= @planet.name %>">
+        </section>
+        <section class="blurb"></section>
+            <p><%= @planet.blurb %></p>
+        </section>
+        <section class="children">
+            <h3><%= @planet.name %>'s Moons</h3>
+            <ul>
+                <% @planet.moons.each do |moon| %>
+                    <li><a href="/moon/<%= moon.id %>"><%= moon.name %></h3></a></li>
+                <% end %>
+            </ul>
+        </section>
+    </section>
+</section>

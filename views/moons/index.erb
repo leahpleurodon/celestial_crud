@@ -1,0 +1,11 @@
+<h2>Moons</h2>
+<section class="records-list">
+        <% @moons.each do |moon| %>
+        <section class="record">
+            <a href="/moon/<%= moon.id %>">
+                <img class="thumb" src="<%= moon.photo_url %>" alt="<%= moon.name %>">
+            </a>
+            <p><a href="/moon/<%= moon.id %>"><%= moon.name %></a><p>
+        </section>
+    <% end %>  
+</section>

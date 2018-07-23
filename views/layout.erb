@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello Worlds...</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway|Righteous" rel="stylesheet">
+  <link rel='stylesheet' href='/stylesheets/main.css'>
+</head>
+<body>
+  <header>
+    <h1>Hello Worlds...</h1>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/galaxies">Galaxies</a></li>
+        <li><a href="/planets">Planets</a></li>
+        <li><a href="/moons">Moons</a></li>
+        <% if logged_in? %>
+          <li><a href="/galaxies/new">Add a Galaxy</a></li>
+          <li><a href="/planets/new">Add a Planet</a></li>
+          <li><a href="/moons/new">Add a Moon</a></li>
+        <% end %>
+      </ul>
+    </nav>
+      <% if logged_in? %>
+          <form action="/session" method="post" class="logout">
+            Welcome: <%= current_user.name %>
+            <input type="hidden" name="_method" value="delete">
+            <button>Logout</button>
+          </form>
+      <% else %>
+        Member?
+        <a href="/session">Login</a>
+      <% end %>
+  </header>
+  <main>
+    <%= yield %>
+  </main>
+  <section class="container"> 
+    <footer>
+      none of the images are mine,
+      the code is kinda &copy; <a href="https://github.com/leahpleurodon">Leah Eramo</a> 2018 I guess...
+
+    </footer>
+  </section>
+</body>
+</html>

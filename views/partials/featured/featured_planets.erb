@@ -1,0 +1,14 @@
+<h2>Featured Planets</h2>
+<section class="featured">
+    <% @planets.each do |planet| %>
+        <section class="record">
+            <a href="/planet/<%= planet.id %>">
+                <img class="thumb" src="<%= planet.photo_url %>" alt="<%= planet.name %>">
+                <p><%= planet.name %><p>
+            </a>
+        </section>
+    <% end %>
+    <% if @planets.count > 3 %>
+        <div style="width:8vw;">&nbsp;</div>
+    <%end %>
+</section>

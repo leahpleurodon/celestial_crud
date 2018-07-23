@@ -1,0 +1,18 @@
+<section class="container">
+    <h2>New Planet</h2>
+    <form action="/planet" method="post">
+        <label for="name">Name</label>
+        <input type="text" name="name">
+        <label for="galaxy_id">Galaxy</label>
+        <select name="galaxy_id" >
+            <% @galaxies.each do |galaxy| %>
+                <option value="<%= galaxy.id %>"><%= galaxy.name %></option>
+            <% end %>
+        </select>
+        <label for="photo_url">Photo URL</label>
+        <input type="text" name="photo_url">
+        <label for="blurb">Blurb</label>
+        <textarea name="blurb"></textarea>
+        <button>Post</button>
+    </form>
+</section>
